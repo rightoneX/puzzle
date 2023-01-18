@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: 'Open Sans', serif;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    text-align: center;
+    padding-top: 5vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 5vh;
+}
+
+.container {
+    display: block;
+    max-width: 500px;
+    min-height: 40vh;
+    margin: auto;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+#wolf {
+    display: flex;
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border: 1px solid red;
+}
+
+#goat {
+    display: flex;
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border: 1px solid rgb(9, 255, 0);
+}
+
+#cabbage {
+    display: flex;
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border: 1px solid rgb(6, 28, 224);
+}
+
+.description {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+}
+
+.trip-container {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.trip {
+    display: flex;
+    max-width: 450px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+.trip-name {
+    display: flex;
+    width: 50px;
+}
+
+.trip .button {
+    margin-left: 10px;
+}
+
+.space-selection {
+    margin: 2px;
+}
+
+.button {
+    background-color: rgb(55, 142, 241);
+    border: 1px solid rgb(24, 116, 223);
+    color: aliceblue;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 70px;
+}
+
+.green {
+    background-color: rgb(4, 145, 28);
+    border: 1px solid rgb(4, 145, 36);
+}
+
+
+#result {
+    display: block;
+    width: 50%;
+    height: 50px;
+    margin-left: 25%;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.right_answer {
+    background-color: rgb(88, 139, 12);
+    color: aliceblue;
+}
+
+.wrong_answer {
+    background-color: rgb(216, 16, 16);
+    color: aliceblue;
+}
