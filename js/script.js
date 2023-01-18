@@ -15,12 +15,6 @@ const result = document.getElementById('result');
 //         alert(this.);
 //     }
 // }, false);
-let temp;
-document.querySelectorAll('.trip-data').forEach(item => {
-    item.addEventListener('click', event => {
-     temp = this.
-    })
-  })
 
 let trip = 1;
 
@@ -34,7 +28,7 @@ addTripBtn.addEventListener('click', () => {
     let nextTrip = document.createElement('div');
     nextTrip.className = "trip"
     nextTrip.innerHTML = "<div class='trip-name'>Рейс " + trip + "</div>"
-        + "<select class='trip-data' class='space-selection'>"
+        + "<select class='trip-data space-selection'>"
         + "<option>Выбрать рейс</option>"
         + "<option value='1'>с лева на права</option>"
         + "<option value='2'>с права на лева</option></select >"
@@ -47,6 +41,19 @@ addTripBtn.addEventListener('click', () => {
     trips.push({ race_number: trip, passenger: 'undefined', relation: 'undefined', river_side: 0 }) 
 })
 
+let temp;
+document.querySelectorAll('.trip-data').forEach(item => {
+    item.addEventListener('click', event => {
+     temp = item.options[item.selectedIndex].value;
+    //  alert(temp)
+    })
+  })
+// const arrClass = document.querySelectorAll(".trip-data");
+// for (let item of arrClass) {
+//     item.addEventListener('click', event => {
+//              temp = item.options[item.selectedIndex].value;
+//             })
+//   }
 // trip_1.addEventListener('click', () => {
 //     trips[0].river_side = trip_1.value;
 // })
