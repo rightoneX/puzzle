@@ -4,6 +4,10 @@ const goBtn = document.getElementById('go-btn');
 const result = document.getElementById('result');
 let trip = 1;
 
+// let wolf = new Passenger('wolf', 0)
+// let goat = new Passenger('goat', 0)
+// let cabbage = new Passenger('cabbage', 0)
+
 addTripBtn.addEventListener('click', () => {
     trip++
     let nextTrip = document.createElement('div');
@@ -23,6 +27,7 @@ addTripBtn.addEventListener('click', () => {
 
 goBtn.addEventListener('click', () => {
     checkResult()
+    alert(goat.getRiverSide())
 })
 
 function checkResult() {
@@ -38,6 +43,8 @@ function checkResult() {
 
 }
 
+
+
 function win() {
     result.className = "result right_answer"
     result.innerText = "Ура! Правильный ответ!"
@@ -46,4 +53,21 @@ function win() {
 function wrong() {
     result.className = "result wrong_answer"
     result.innerText = "Нужно подумать!"
+}
+
+class Passenger {
+    position = 0 // first bank of the river
+    name
+    constructor(name, position) {
+        this.name = name
+        this.position = position
+    }
+
+    setRiverSide(position) {
+        this.position = position
+    }
+
+    getRiverSide(){
+        return this.position
+    }
 }
