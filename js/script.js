@@ -21,18 +21,29 @@ addTripBtn.addEventListener('click', () => {
     tripContainer.appendChild(nextTrip)
 })
 
-
-goBtn.addEventListener('click', ()=> {
-    wrong()
+goBtn.addEventListener('click', () => {
+    checkResult()
 })
 
+function checkResult() {
+    //wc -> g
+    //c -> wg
+    //cg <- w
+    //g ->cw
+    // ->gcw
+    if (trip < 5) {
+        return wrong()
+    }
+    return win()
 
-function win(){
-    result.className += "right_answer"
-    result.innerText= "Ура! Правильный ответ!"
 }
 
-function wrong(){
-    result.className += "wrong_answer"
-    result.innerText= "Нужно подумать!"
+function win() {
+    result.className = "result right_answer"
+    result.innerText = "Ура! Правильный ответ!"
+}
+
+function wrong() {
+    result.className = "result wrong_answer"
+    result.innerText = "Нужно подумать!"
 }
