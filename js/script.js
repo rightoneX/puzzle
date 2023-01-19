@@ -104,6 +104,10 @@ function saveResult() {
     let gameResult;
 
     trips.forEach((item, index) => {
+        if (item['wolf'] === 0) { item['wolf'] = 'левый берег' }
+        if (item['goat'] === 0) { item['goat'] = 'левый берег' }
+        if (item['cabbege'] === 0) { item['cabbege'] = 'левый берег' }
+
         gameResult += "шаг > " + item['race_number']
             + " | позиция волка > " + item['wolf']
             + " | позиция козы > " + item['goat']
