@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
         <title>Волк, коза и капуста</title>
     </head>
@@ -11,57 +12,45 @@
         <div class="content">
             <div class="title">Волк, коза и капуста</div>
             <div class="container">
-                <div id="wolf">волк</div>
-                <div id="goat">коза</div>
-                <div id="cabbage">капуста</div>
+                <div id="wolf"></div>
+                <div id="goat"></div>
+                <div id="cabbage"></div>
             </div>
-            <div id="result"></div>
+
+            <div id="result-msg"></div>
+
+            <button id="save-btn" class="button orange hide">Сохранить</button>
+
             <div class="description">
-                <p>“Крестьянину нужно перевезти через реку волка, козу и
+                <p>Крестьянину нужно перевезти через реку волка, козу и
                     капусту.
                     Но лодка такова, что в ней может поместиться только
                     крестьянин,
                     а с ним или один волк, или одна коза, или одна капуста.
                     Но если оставить волка с козой, то волк съест козу, а если
-                    оставить козу с капустой, то коза съест капусту.<br>
-                    <strong>Как перевезти свой груз крестьянин?</strong>”</p>
+                    оставить козу с капустой, то коза съест капусту.<br><br>
+                    Как перевезти свой груз крестьянину?</p>
             </div>
             <div id="trip-container">
 
                 <div class="trip">
-                    <div class="trip-name">Рейс 1</div>
-                    <select class="trip-data space-selection">
+                    <div class="trip-name"></div>
+                    <select id="trip-data" class="space-selection">
                         <option>Выбрать рейс</option>
-                        <option value="1">с лева на права</option>
-                        <option value="2">с права на лева</option>
+                        <option value="правый берег">правый берег</option>
+                        <option value="левый берег">левый берег</option>
                     </select>
-                    <select id="passenger-1" class="space-selection">
+                    <select id="passenger-data" class="space-selection">
                         <option>Выбрать пассажира</option>
-                        <option value="wolf">Волк</option>
-                        <option value="goat">Коза</option>
-                        <option value="cabbage">Капуста</option>
+                        <option value="волк">волк</option>
+                        <option value="коза">коза</option>
+                        <option value="капуста">капуста</option>
                     </select>
                     <button id="add-trip-btn" class="button">+</button>
                 </div>
-
-                <!-- <div class="trip">
-                    <div class="trip-name">Рейс 1</div>
-                    <select class="trip-data space-selection">
-                        <option>Выбрать рейс</option>
-                        <option value="1">с лева на права</option>
-                        <option value="2">с права на лева</option>
-                    </select>
-                    <select id="passenger-2" class="space-selection">
-                        <option>Выбрать пассажира</option>
-                        <option value="wolf">Волк</option>
-                        <option value="goat">Коза</option>
-                        <option value="cabbage">Капуста</option>
-                    </select>
-                    <button id="add-trip-btn" class="button">+</button>
-                </div> -->
             </div>
 
-            <button id="go-btn" class="button green">Поехали</button>
+            <button id="go-btn" class="button green">Проверить</button>
         </div>
         <script src="js/script.js"></script>
     </body>

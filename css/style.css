@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
+    background-image: linear-gradient(#80bffa 0%, #5a89cf 100%);
+    color: white;
     font-family: 'Open Sans', serif;
     padding: 0;
     margin: 0;
+    height: 100vh;
 }
 
 .content {
@@ -11,7 +14,6 @@ body {
     padding-top: 5vh;
     align-items: center;
     justify-content: center;
-
 }
 
 .title {
@@ -21,34 +23,47 @@ body {
 
 .container {
     display: block;
-    max-width: 500px;
-    min-height: 40vh;
+    width: 719px;
+    height: 455px;
     margin: auto;
     border: 1px solid rgb(214, 214, 214);
+    background-image: url('../img/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #wolf {
+    background-image: url('../img/wolf.png');
+    background-repeat: no-repeat;
     display: flex;
     position: relative;
-    height: 70px;
-    width: 70px;
-    border: 1px solid red;
+    height: 73px;
+    width: 115px;
+    top:270px;
+    left: 140px;
 }
 
 #goat {
+    background-image: url('../img/goat.png');
+    background-repeat: no-repeat;
     display: flex;
     position: relative;
-    height: 70px;
-    width: 70px;
-    border: 1px solid rgb(9, 255, 0);
+    height: 83px;
+    width: 85px;
+    top:260px;
+    left: 90px;
 }
 
 #cabbage {
+    background-image: url('../img/cabbage.png');
+    background-repeat: no-repeat;
     display: flex;
     position: relative;
-    height: 70px;
-    width: 70px;
-    border: 1px solid rgb(6, 28, 224);
+    height: 48px;
+    width: 51px;
+    top:250px;
+    left: 70px;
+
 }
 
 .description {
@@ -86,6 +101,11 @@ body {
     margin-left: 10px;
 }
 
+.trip-line {
+    display: inline;
+    margin-left: 10px;
+}
+
 .space-selection {
     margin: 2px;
 }
@@ -95,9 +115,13 @@ body {
     border: 1px solid rgb(24, 116, 223);
     color: aliceblue;
     border-radius: 5px;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 5px;
-    width: 70px;
+    width: 80px;
+}
+
+.hide {
+    display:none;
 }
 
 .green {
@@ -105,8 +129,12 @@ body {
     border: 1px solid rgb(4, 145, 36);
 }
 
+.orange{
+    background-color: rgb(212, 104, 15);
+    border: 1px solid  rgb(212, 104, 45);
+}
 
-#result {
+#result-msg {
     display: block;
     width: 50%;
     height: 50px;
@@ -121,6 +149,6 @@ body {
 }
 
 .wrong_answer {
-    background-color: rgb(216, 16, 16);
+    background-color: rgb(228, 145, 20);
     color: aliceblue;
 }
